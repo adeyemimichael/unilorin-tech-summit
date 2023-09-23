@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from 'react';
 import Navbarjs from "./Navbarjs";
-import About from "./About";
+// import About from "./About";
 import axios from "axios";
 import back from "../assets/17341.jpg";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { useState } from "react";
+
 import { motion } from "framer-motion";
 import image1 from "../assets/new.webp";
 import image2 from "../assets/anu.webp";
@@ -17,7 +17,7 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Talk from "./Talk";
-
+import SuccessAlert from "./Alert";
 
 
 const Home = () => {
@@ -35,11 +35,13 @@ const Home = () => {
  
   const [name, SetUsername] = useState(" ");
   const [email, SetEmail] = useState(" ");
+  const [showSuccess, setShowSuccess] = useState(false);
+
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(username, email);
     const Data = {
-      
       Username:name,
       Email: email,
     };
@@ -51,9 +53,14 @@ const Home = () => {
         console.log(response);
         SetUsername("");
         SetEmail("");
-      
       });
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 2000); // 2 seconds in milliseconds
+      
   };
+ 
 
   return (
     <div className="w-100%  flex flex-col  items-center">
@@ -74,9 +81,9 @@ const Home = () => {
           >
             A Global <br></br> Tech Event in a University{" "}
           </motion.h1>
-          <motion.div className="bg-[#b5fc1d] flex p-4 my-3 justify-center items-start rounded-lg shadow-zinc-400 shadow-sm hover:ease-in-out duration-500 hover:bg-[#abe431] ">
+          <motion.div className=" flex  my-3 justify-center items-start   ">
             {/* <FaLocationDot className='my-2 mx-2'/> */}
-            <motion.h1 className=" text-[16px] md:text-[20px] font-bold flex ">
+            <motion.h1 className=" text-[16px] p-4 md:text-[20px] font-bold flex  bg-[#b5fc1d] rounded-lg shadow-zinc-400 shadow-sm hover:ease-in-out duration-500 hover:bg-[#51681f] ">
               <FaMapMarkerAlt
                 className="mt-[4px] mx-2 "
                 initial={{
@@ -88,6 +95,7 @@ const Home = () => {
               />
               University of Ilorin
             </motion.h1>
+        
           </motion.div>
           <motion.p
             className="text-center text-[#b5fc1d] p-2 mb-10 text-[20px] font-semibold ml-4"
@@ -100,7 +108,7 @@ const Home = () => {
           >
             Anticipate UTS'24
           </motion.p>
-          <img src={back} alt="" className="absolute opacity-5 object-cover" />
+          <img src={back} alt="" className="absolute opacity-5 object-contain w-fit h-fit" />
         </div>
       </div>
       <motion.div className="w-fit h-[100%] md:w-[90%]  bg-[#000038] md:h-screen rounded-2xl  shadow-slate-700 shadow-md   flex justify-center items-center flex-col mb-20 ">
@@ -133,7 +141,7 @@ const Home = () => {
             <img
               src={image2}
               alt=""
-              srcset=""
+              
               className=" w-64 h-44 md:w-68 md:h-44 rounded-2xl"
             />
           </motion.div>
@@ -256,8 +264,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className=" md:flex md:flex-col md:justify-center md:items-center flex flex-col justify-center items-center bg-[#000038]  w-screen h-[40%]  md:w-[90%]  md:h-[40%]  md:shadow-slate-400 md:shadow-lg rounded-2xl  rounded-t-none md:mb-20  text-white relative md:mx-12">
-        <h1 className="md:pb-32 mx-4 md:mx-0 pt-6">
+      {/* Waitlist div  */}
+      <div id='waitlist'
+      className=" md:flex md:flex-col md:justify-center md:items-center flex flex-col justify-center items-center bg-[#000038]  w-screen h-[40%]  md:w-[90%]  md:h-[40%]  md:shadow-slate-400 md:shadow-lg rounded-2xl  rounded-t-none md:mb-20  text-white relative md:mx-12">
+        <h1 className="md:pb-32 mx-4 md:mx-0 pt-6 text-center">
           Subscribe to our newsletter <br></br>
           To stay updated on the upcoming event
         </h1>
@@ -271,9 +281,10 @@ const Home = () => {
           </label>
           <input
             type="text"
+            required
             onChange={(e) => SetUsername(e.target.value)}
             value={name}
-            required
+            // required
             className="w-full bg-[#96c237] rounded-md p-2 outline-none "
           />
           <label htmlFor="" className="text-[#000038] p-2">
@@ -282,14 +293,16 @@ const Home = () => {
           <input
             type="email"
             value={email}
-            onChange={(e) => SetEmail(e.target.value)}
             required
+            onChange={(e) => SetEmail(e.target.value)}
+            // required
             className="w-full bg-[#96c237] rounded-md p-2 outline-none"
           />
           <button className="bg-[#000038] my-4 w-full  rounded-md p-2" type="submit">
             Submit
           </button>
         </form>
+        {showSuccess && <SuccessAlert />}
       </div>
       <div className="w-screen h-fit  flex flex-col justify-center items-center">
         <div className="flex flex-row  mt-20 shadow-md  p-4">

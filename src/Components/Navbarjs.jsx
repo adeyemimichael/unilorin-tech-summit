@@ -28,10 +28,10 @@ const Navbarjs = () => {
 <div className= {!nav ? 'left-0  top-20  fixed w-[60%] h-[100%] md:w-[40%] opacity-90 flex flex-col justify-center items-center  my-2 ease-in-out duration-500  sm:visible  rounded-lg bg-[#000038] z-10'  :'  fixed left-[-100%] ' } default >
       <ul className='  absolute'>
       <Link to='/'><li  className='p-4 text-white border-b-2  border-b-gray-400  cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>Home</li></Link>
-     
-
+  
       <Link to="/about"><li  className='p-4 text-white border-b-2  border-b-gray-400 cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>About</li></Link>
       <Link to="/details"> <li className='p-4 text-white  border-b-2  border-b-gray-400 cursor-pointer  hover:text-[24px] hover:ease-in-out duration-300'>UTS'23 Excerpts </li></Link>
+      <Link to="/"><li  className='p-4 text-white border-b-2  border-b-gray-400 cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>Join the Waitlist</li></Link>
       </ul>
     </div>
     <div onClick={handleNav} className=' block sm:block'>
