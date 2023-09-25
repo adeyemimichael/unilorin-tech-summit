@@ -267,7 +267,7 @@ const Home = () => {
       {/* Waitlist div  */}
       <div id='waitlist'
       className=" md:flex md:flex-col md:justify-center md:items-center flex flex-col justify-center items-center bg-[#000038]  w-screen h-[40%]  md:w-[90%]  md:h-[40%]  md:shadow-slate-400 md:shadow-lg rounded-2xl  rounded-t-none md:mb-20  text-white relative md:mx-12">
-        <h1 className="md:pb-32 mx-4 md:mx-0 pt-6 text-center">
+        <h1 className="md:pb-36 mx-4 md:mx-0 pt-6 text-center">
           Subscribe to our newsletter <br></br>
           To stay updated on the upcoming event
         </h1>
