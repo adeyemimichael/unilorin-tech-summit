@@ -81,7 +81,7 @@ const Home = () => {
           >
             A Global <br></br> Tech Event in a University{" "}
           </motion.h1>
-          <motion.div className=" flex  my-3 justify-center items-start  flex-col md:flex-row z-10">
+          <motion.div className=" flex  my-3 justify-center items-start z-10 flex-col md:flex-row ">
             {/* <FaLocationDot className='my-2 mx-2'/> */}
             <motion.h1 className=" text-[16px] p-4 md:text-[20px] font-bold flex  bg-[#b5fc1d] rounded-lg shadow-zinc-400 shadow-sm hover:ease-in-out duration-500 hover:bg-[#d9ff88] ">
               <FaMapMarkerAlt
@@ -95,7 +95,7 @@ const Home = () => {
               />
               University of Ilorin
             </motion.h1>
-            <a href="https://uts-sponsors.netlify.app/"><motion.button className ='mx-2 md:my-0 my-4  text-[16px] p-4 md:text-[20px] font-bold text-[#fff] flex cursor-pointer border-2 border-white rounded-lg shadow-zinc-400 shadow-sm hover:ease-in-out duration-500 hover:bg-[#b5fc1d] ' > 
+            <a href="https://uts-sponsors.netlify.app/"><motion.button className ='mx-2 z-10 md:my-0 my-4  text-[16px] p-4 md:text-[20px] font-bold text-[#fff] flex cursor-pointer border-2 border-white rounded-lg shadow-zinc-400 shadow-sm hover:ease-in-out duration-500 hover:bg-[#b5fc1d] ' > 
             Become A Sponsor</motion.button> </a>
           </motion.div>
 
@@ -271,7 +271,7 @@ const Home = () => {
       <div id='waitlist'
       className=" md:flex md:flex-col md:justify-center md:items-center flex flex-col justify-center items-center bg-[#000038]  w-screen h-[40%]  md:w-[90%]  md:h-[40%]  md:shadow-slate-400 md:shadow-lg rounded-2xl  rounded-t-none md:mb-20  text-white relative md:mx-12">
         <h1 className="md:pb-36 mx-4 md:mx-0 pt-6 text-center">
-          Subscribe to our newsletter <br></br>
+          Join the Waitlist <br></br>
           To stay updated on the upcoming event
         </h1>
         <form

@@ -25,7 +25,7 @@ const Navbarjs = () => {
 <img src={image} alt=""  className='h-[24px] md:mx-4 md:pl-4 mt-6 cursor-pointer mx-0 ml-4 ' />
 <h1 className='md:mx-4 md:pl-4 ml-2 text-[#fff] pt-0 cursor-pointer hover:text-[#b5fc1d] text-[10px] md:text-lg'>Unilorin Tech Summit </h1>
 </div>
-<div className= {!nav ? 'left-0  top-20  fixed w-[60%] h-[100%] md:w-[40%] opacity-90 flex flex-col justify-center items-center  my-2 ease-in-out duration-500  sm:visible  rounded-lg bg-[#000038] z-10'  :'  fixed left-[-100%] ' } default >
+<div className= {!nav ? 'left-0  top-20  fixed w-[60%] h-[100%] md:w-[40%] opacity-90 flex flex-col justify-center items-center  my-2 ease-in-out duration-500  sm:visible  rounded-lg bg-[#000038] z-20'  :'  fixed left-[-100%] ' } default >
       <ul className='  absolute'>
       <Link to='/'><li  className='p-4 text-white border-b-2  border-b-gray-400  cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>Home</li></Link>
   
