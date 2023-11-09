@@ -2,6 +2,7 @@ import React from 'react'
 import { useState,useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { animateScroll as scroll } from 'react-scroll';
 import image from '../assets/logo.png'
 const Navbarjs = () => {
   const [nav, setNav] = useState(true);
@@ -31,7 +32,10 @@ const Navbarjs = () => {
   
       <Link to="/about"><li  className='p-4 text-white border-b-2  border-b-gray-400 cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>About</li></Link>
       <Link to="/details"> <li className='p-4 text-white  border-b-2  border-b-gray-400 cursor-pointer  hover:text-[24px] hover:ease-in-out duration-300'>UTS'23 Excerpts </li></Link>
-      <Link to="/"><li  className='p-4 text-white border-b-2  border-b-gray-400 cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'>Join the Waitlist</li></Link>
+      <Link to="waitlist"
+            spy={true}
+            smooth={true}
+            duration={500}><li  className='p-4 text-white border-b-2  border-b-gray-400 cursor-pointer hover:text-[24px] hover:ease-in-out duration-300'> <a href="#section">Join the Waitlist</a></li></Link>
       </ul>
     </div>
     <div onClick={handleNav} className=' block sm:block'>

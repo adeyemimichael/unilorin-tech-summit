@@ -268,7 +268,7 @@ const Home = () => {
         </div>
       </div>
       {/* Waitlist div  */}
-      <div id='waitlist'
+      <div id='section'
       className=" md:flex md:flex-col md:justify-center md:items-center flex flex-col justify-center items-center bg-[#000038]  w-screen h-[40%]  md:w-[90%]  md:h-[40%]  md:shadow-slate-400 md:shadow-lg rounded-2xl  rounded-t-none md:mb-20  text-white relative md:mx-12">
         <h1 className="md:pb-36 mx-4 md:mx-0 pt-6 text-center">
           Join the Waitlist <br></br>
@@ -287,7 +287,7 @@ const Home = () => {
             required
             onChange={(e) => SetUsername(e.target.value)}
             value={name}
-            // required
+          
             className="w-full bg-[#96c237] rounded-md p-2 outline-none "
           />
           <label htmlFor="" className="text-[#000038] p-2">
@@ -298,7 +298,7 @@ const Home = () => {
             value={email}
             required
             onChange={(e) => SetEmail(e.target.value)}
-            // required
+          
             className="w-full bg-[#96c237] rounded-md p-2 outline-none"
           />
           <button className="bg-[#000038] my-4 w-full  rounded-md p-2" type="submit">

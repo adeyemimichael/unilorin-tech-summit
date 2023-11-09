@@ -1,13 +1,13 @@
-import { useState } from 'react'
+// import { useState } from 'react'
  import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home'
 
 import About from './Components/About'
 import Speakers from './Components/Attendees'
 import Waitlist from './Components/Waitlist'
-import Power from './Components/Power'
+// import Power from './Components/Power'
  import Details from './Components/Details'
-import Navbarjs from './Components/Navbarjs';
+// import Navbarjs from './Components/Navbarjs';
 function App() {
 
 
@@ -21,7 +21,7 @@ function App() {
     </Route>
     
     <Route path ='/speakers' element={  <Speakers/>}></Route>
-    <Route path ='/waitlist' element={  <Waitlist/>}></Route>
+    <Route path ='/waitlist' element={  <Waitlist />}></Route>
    <Route path ='/details' element={  <Details/>}></Route>
   
   
