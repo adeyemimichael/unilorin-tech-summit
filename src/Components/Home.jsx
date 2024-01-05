@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import Navbarjs from "./Navbarjs";
 // import About from "./About";
 import axios from "axios";
